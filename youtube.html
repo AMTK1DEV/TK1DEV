@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<title> TKTUBE</title>
+<style>
+  p {
+    margin:0px ;
+    font-family: arial;
+  }
+  body{
+    margin: 0;
+    padding-top: 90px;
+    padding-left: 70px;
+    background-color: rgb(241, 240, 240);
+    
+  }
+  .header{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px;
+    position: fixed;
+    background-color: white;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(222, 222, 222);
+    
+   
+  }
+  .front{
+    
+    width: 30px;
+    margin-right: 200px;
+    
+    display: flex;
+    flex-direction: row;
+    
+
+  }
+  .menu {
+    height: 20px;
+    margin-left: 10px;
+
+  }
+  .logo {
+    height: 20px;
+    margin-left: 15px;
+  }
+
+  .middle {
+    display: flex;
+    flex: 1fr;
+    width: 500px;
+    margin-right: 200px;
+    align-items: center;
+  }
+  .serach {
+    flex: 1;
+    height: 30px;
+    width: 0;
+
+  }
+  .button {
+    width: 60px;
+    height: 36px;
+    position: relative;
+  }
+  .button .hov{
+    font-size: 12px;
+    background-color: rgb(124, 123, 123);
+    padding: 4px;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 0.123;
+  }
+
+  .button:hover .hov, .but:hover .right {
+    opacity: 1;
+    align-items: center;
+    top: 50px;
+  }
+
+  .two {
+    height: 20px;
+    padding-bottom: 5px;
+  }
+   
+  .but {
+    border-radius: 20px;
+   height: 30px;
+   border-width: 0px;
+   margin-left: 10px;
+   position: relative;
+  }
+  .but .right {
+    position: absolute;
+    font-family: arial;
+    color: black;
+    background-color: rgb(141, 141, 141);
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.123;
+    opacity: 0;
+  }
+
+    
+  .voice {
+    width: 20px;
+    
+  }
+
+  .back {
+    
+    width: 250px;
+    margin-left: 250px;
+    display: flex;
+    flex-shrink: 0px ;
+  }
+  .upload {
+    height: 30px;
+    margin-right: 20px;
+  }
+  .app {
+    height: 30px;
+    margin-right: 10px;
+  }
+  .not {
+    height: 30px;
+    margin-right: 10px;
+    position: relative;
+  }
+  .jog {
+    position: absolute;
+    top: 15px;
+    right: 109px;
+    background-color: red;
+    width: 10px;
+    border-radius: 25px;
+    padding: 1px;
+    color: white;
+    font-family: arial;
+    font-size: 12px;
+
+  }
+  .my {
+    height: 30PX;
+  }
+  .sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 70px;
+    width: 75px;
+    background-color: white;
+    
+ 
+  }
+  .link {
+    height: 62px;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px;
+  }
+  .link:hover {
+    background-color: rgb(182, 178, 178);
+  }
+  .link div{
+    display: flex;
+    font-size: 10px;
+  }
+  .home {
+    height: 28px;
+    
+  }
+
+  .all-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    
+    
+  }
+  .video-preview {
+    width: 300px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+  }
+  .profile {
+    border-radius: 80px;
+    width: 40px;
+    vertical-align: top;
+  }
+  .text {
+    font-family: arial;
+    font-size: 14px;
+    width: 250px;
+    
+  }
+    .title {
+      display: inline-block;
+
+    }
+    .name {
+      margin-top: 10px;
+      color: rgb(96, 96, 96);
+      font-size: 12px;
+    }
+    .view {
+      color: rgb(96, 96, 96);
+      font-size: 12px;
+    }
+</style>
+  </head>
+  <body>
+    <div class="header">
+       <div class="front"> 
+        <img class="menu"  src="youtube files/hamburger-menu.svg">
+        <img class="logo" src="youtube files/youtube-logo.svg">
+       </div>
+       <div class="middle">
+        <input class="serach" textbox placeholder="search">
+        <button class="button">
+       <img class="two" src="youtube files/search.svg">
+       <div class="hov">search</div>
+        </button> 
+        <button class="but" > <img class="voice" src="youtube files/voice-search-icon.svg">
+          <div class="right">voice with your search</div>
+        </button>
+       </div>
+        
+      
+       <div class="back">
+        <img class="upload" src="youtube files/upload.svg">
+        <img class="app" src="youtube files/youtube-apps.svg">
+        <div>
+          <img class="not" src="youtube files/notifications.svg">
+          
+        </div>
+        <img class="my" src="youtube files/ttt.png">
+    
+       </div>
+
+    </div>
+    <div class="sidebar" > 
+      <div class="link">
+        <img class="home" src="youtube files/home.svg">
+        <div>Home</div>
+      </div>
+      <div class="link"><img class="home" src="youtube files/explore.svg">
+        <div>explore</div>
+      </div>
+      <div class="link"><img class="home" src="youtube files/subscriptions.svg">
+      <div>subscriptions</div>
+    </div>
+      <div class="link"><img class="home" src="youtube files/originals.svg">
+      <div>originals</div>
+    </div>
+      <div class="link"><img class="home" src="youtube files/youtube-music.svg">
+      <div>youtube music</div>
+    </div>
+      <div class="link"><img class="home" src="youtube files/library.svg">
+        <div>library</div>
+    </div>
+      
+    </div>
+
+<div class="all-grid">
+  <div class="block">
+  <img class="video-preview" src="youtube files/thumbnail-1.webp">
+   <div class="grid">
+    <Img class="profile" src="youtube files/channel-1.jpeg">
+   <div class=" title">
+    <p class="text">
+    Talking Tech and AI with Google CEO Sundar Pichai!
+    </p>
+   <p class="name">Marques Brownlee
+   </p>
+   <p class="view">
+   3.4M views · 6 months ago
+   </p>
+
+   </div>
+
+  </div>
+  
+</div>
+
+<div class="block">
+  <img class="video-preview" src="youtube files/thumbnail-2.webp">
+  <div class="grid">
+    <Img class="profile" src="youtube files/channel-2.jpeg">
+   <div class=" title">
+    <p class="text">
+    Try Not To Laugh Challenge #9
+    </p>
+   <p class="name">Markiplier
+   </p>
+   <p class="view">
+   19M views · 4 years ago
+   </p>
+ 
+   
+
+   </div>
+
+  </div>
+  
+</div>
+
+<div class="block">
+  <img class="video-preview" src="youtube files/thumbnail-3.webp">
+   <div class="grid">
+    <Img class="profile" src="youtube files/channel-3.jpeg">
+   <div class=" title">
+    <p class="text">
+    Crazy Tik Toks Taken Moments Before DISASTER
+    </p>
+   <p class="name">SSSniperWolf
+   </p>
+   <p class="view">
+   12M views · 1 year ago
+   </p>
+
+   </div>
+
+  </div>
+  
+</div>
+
+<div class="block">
+  <img class="video-preview" src="youtube files/thumbnail-4.webp">
+  <div class="grid">
+    <Img class="profile" src="youtube files/channel-4.jpeg">
+   <div class=" title">
+    <p class="text">
+    The Simplest Math Problem No One Can Solve - Collatz Conjecture
+    </p>
+   <p class="name">Veritasium
+   </p>
+   <p class="view">
+   18M views · 4 months ago
+   </p>
+ 
+   
+
+   </div>
+
+  </div>
+  
+</div>
+
+<div class="block">
+  <img class="video-preview" src="youtube files/thumbnail-5.webp">
+   <div class="grid">
+    <Img class="profile" src="youtube files/channel-5.jpeg">
+   <div class=" title">
+    <p class="text">
+    Kadane's Algorithm to Maximum Sum Subarray Problem
+    </p>
+   <p class="name">CS Dojo
+   </p>
+   <p class="view">
+   519K views · 5 years ago
+   </p>
+
+   </div>
+
+  </div>
+  
+</div>
+
+<div class="block">
+  <img class="video-preview" src="youtube files/thumbnail-6.webp">
+  <div class="grid">
+    <Img class="profile" src="youtube files/channel-6.jpeg">
+   <div class=" title">
+    <p class="text">
+    
+Anything You Can Fit In The Circle I’ll Pay For
+    </p>
+   <p class="name">MrBeast
+   </p>
+   <p class="view">
+   141M views · 1 year ago
+   </p>
+ 
+   
+
+   </div>
+
+  </div>
+  
+</div>
+
+<div class="block">
+  <img class="video-preview" src="youtube files/thumbnail-7.webp">
+   <div class="grid">
+    <Img class="profile" src="youtube files/channel-7.jpeg">
+   <div class=" title">
+    <p class="text">
+    Why Planes Don't Fly Over Tibet
+    </p>
+   <p class="name">RealLifeLore
+   </p>
+   <p class="view">
+   6.6M views · 1 year ago
+   </p>
+
+   </div>
+
+  </div>
+  
+</div>
+
+<div class="block">
+  <img class="video-preview" src="youtube files/thumbnail-8.webp">
+  <div class="grid">
+    <Img class="profile" src="youtube files/channel-8.jpeg">
+   <div class=" title">
+    <p class="text">
+    Inside The World's Biggest Passenger Plane
+    </p>
+   <p class="name">Tech Vision
+   </p>
+   <p class="view">
+   3.7M views · 10 months ago
+   </p>
+ 
+   
+
+   </div>
+
+  </div>
+  
+</div>
+
+<div class="block">
+  <img class="video-preview" src="youtube files/thumbnail-9.webp">
+   <div class="grid">
+    <Img class="profile" src="youtube files/channel-9.jpeg">
+   <div class=" title">
+    <p class="text">
+    The SECRET to Super Human STRENGTH
+    </p>
+   <p class="name">ThenX
+   </p>
+   <p class="view">
+   20M views · 3 year ago
+   </p>
+
+   </div>
+
+  </div>
+  
+</div>
+
+<div class="block">
+  <img class="video-preview" src="youtube files/thumbnail-10.webp">
+  <div class="grid">
+    <Img class="profile" src="youtube files/channel-10.jpeg">
+   <div class=" title">
+    <p class="text">
+    How The World's Largest Cruise Ship Makes 30,000 Meals Every Day
+    </p>
+   <p class="name">Business Insider
+   </p>
+   <p class="view">
+   14M views · 1 year ago
+   </p>
+   </div>
+
+  </div>
+  
+</div>
+
+<div class="block">
+  <img class="video-preview" src="youtube files/thumbnail-11.webp">
+   <div class="grid">
+    <Img class="profile" src="youtube files/channel-11.jpeg">
+   <div class=" title">
+    <p class="text">
+    Dubai's Crazy Underwater Train and Other Things #Only in Dubai
+    </p>
+   <p class="name">Destination Tips
+   </p>
+   <p class="view">
+   3M views · 1 year ago
+   </p>
+
+   </div>
+
+  </div>
+  
+</div>
+
+<div class="block">
+  <img class="video-preview" src="youtube files/thumbnail-12.webp">
+  <div class="grid">
+    <Img class="profile" src="youtube files/channel-12.jpeg">
+   <div class=" title">
+    <p class="text">
+    What would happen if you didn’t drink water? - Mia Nacamulli
+    </p>
+   <p class="name">TED-Ed
+   </p>
+   <p class="view">
+   12M views · 5 years ago
+   </p>
+ 
+   
+
+   </div>
+
+  </div>
+  
+</div>
+
+</div>
+
+
+  </body>
+</html>  
